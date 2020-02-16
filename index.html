@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Shurawood</title> 
+  <style> 
+    *{
+      margin: 0;
+      padding: 0;
+    }
+  body{
+    background:linear-gradient( rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.39) ), url(1.jpg) no-repeat;
+    -moz-background-size: 100%; 
+    -webkit-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: top;
+    margin-top:5%; 
+    margin-bottom:5%; 
+  	position: center;
+  } 
+   
+      .s48:before {
+  			font-family:  'PT Sans', sans-serif, arial;
+  			font-size: 6px;
+  			font-weight: normal;
+  			font-style: normal;
+  		}
+      h1 {
+        font-size: 33px;
+        color: #fff;
+        padding: 5% 15% 1% 15%;
+        /*margin: 0 -8px -90px -8px;*/
+        text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px gray;
+        font-weight: normal;
+      }
+  		p{
+  		
+  			font-size: 33px;
+  			color: #fff;
+  			/*margin: 0 -8px -90px -8px;*/
+  			text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px gray;
+        padding: 1% 15% ;
+  		}
+     
+  		h4 {
+  			font-size: 19px;
+  			color: #fff;
+  			text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px gray;
+        padding: 0% 15% 2%;
+      }
+  		.center { text-align: center; }
+  		.form-inner {padding: 10px;}
+
+  .form-inner input,
+  .form-inner textarea {
+    width: 15%;
+    padding: 0 10px;
+    background: #E9EFF6;
+    line-height: 50px;
+    border-width: 0;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    /*font-size: 18px;*/
+  }
+
+  #submit{
+    font-family: Calibri;
+    /*outline: none;*/
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    color: black;
+    border-radius: 10px;
+    background: #9bd3fb; 
+    
+    
+    border: 1px solid #82c8fa;
+    background-size: 100% auto;
+    
+  }
+    #submit:hover{
+      background: -webkit-linear-gradient(#9bd3fb, #82c8fa 45%, #9bd3fb 100%);
+      background: -o-linear-gradient(#9bd3fb, #82c8fa 45%, #9bd3fb 100%);
+      background: linear-gradient(#9bd3fb, #82c8fa 45%, #9bd3fb 100%); 
+      color: #fff;
+      border: 1px solid #333; 
+      transition: .5s;
+    }
+  br {
+    display: none;
+  }
+  @media screen and (max-width: 1010px){
+         
+    br{
+       display: inline;
+     }
+    .form-inner input{
+       margin: 10px;
+       min-width: 80%;
+       line-height: 60px;
+       font-size: 20px;
+    }
+    #submit{
+      font-size: 20px;
+      width: calc(80% + 20px);
+    }
+  }
+  </style>
+  <link rel="stylesheet" type="text/css" >
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+</head>
+<body> 
+
+<div>
+  <h1 class="center s48" style="font-size: 48px;">Получи сертификат со скидкой в 1000 рублей!</h1>
+  <p class="center">Время действия сертификата с момента получения - один год. После заполнения формы ниже, Вам на указанный e-mail придёт именной электронный сертификат.</p>
+  <h4 class="center" >*Разрабатываем дизайн и изготавливаем мебель из дерева любой сложности</h4>
+
+  <form class="form-inner center" action="send.php" method="POST">
+    
+      <input name="name" type="text" placeholder="* Ваше имя" required="required"><br>
+      <input id="phone" name="phone" type="text" placeholder="* Ваш телефон" required="required"><br>     
+      <input name="email" type="text" placeholder="* E-mail" required="required"><br>
+      <input id="submit" type="submit" value="Получить"> <br>
+      <script>
+        //Код jQuery, установливающий маску для ввода телефона элементу input
+        //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+        $(function(){
+          //2. Получить элемент, к которому необходимо добавить маску
+          $("#phone").mask("8(999) 999-9999");
+        });
+      </script>
+  </form>
+  
+
+
+</div>
+</body>
+</html>
