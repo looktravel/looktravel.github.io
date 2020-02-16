@@ -31,7 +31,7 @@
       h1 {
         font-size: 33px;
         color: #fff;
-        padding: 5% 15% 1% 15%;
+      
         /*margin: 0 -8px -90px -8px;*/
         text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px gray;
         font-weight: normal;
@@ -49,7 +49,7 @@
   			font-size: 19px;
   			color: #fff;
   			text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px gray;
-        padding: 0% 15% 2%;
+      
       }
   		.center { text-align: center; }
   		.form-inner {padding: 10px;}
@@ -89,11 +89,34 @@
       border: 1px solid #333; 
       transition: .5s;
     }
-  br {
+ 
+  @media screen and (min-width: 1200px) {
+    h1 {
+      padding: 5% 15% 1% 15%;
+    }
+    h4 {
+      padding: 0% 15% 2%;
+    }
+    p{
+       padding: 1% 15%;
+    }
+    br {
     display: none;
+    }
   }
-  @media screen and (max-width: 1010px){
+  @media screen and (max-width: 1199px){
          
+    h1 {
+      padding: 5% 5% 1% 5%;
+    }
+    h4 {
+      padding: 0% 5% 2%;
+    }
+    p{
+       padding: 1% 5%;
+    }
+    
+ 
     br{
        display: inline;
      }
@@ -105,6 +128,33 @@
     }
     #submit{
       font-size: 20px;
+      width: calc(80% + 20px);
+    }
+  }
+  @media screen and (max-width: 1000px){
+         
+    h1 {
+      padding: 5% 5% 1% 5%;
+    }
+    h4 {
+      padding: 0% 5% 2%;
+    }
+    p{
+       padding: 1% 5%;
+    }
+    
+ 
+    br{
+       display: inline;
+     }
+    .form-inner input{
+       margin: 10px;
+       min-width: 80%;
+       line-height: 60px;
+       font-size: 40px;
+    }
+    #submit{
+      font-size: 40px;
       width: calc(80% + 20px);
     }
   }
